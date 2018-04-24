@@ -2,10 +2,10 @@
 A very simple (and buggy) VPN program that uses TLS over a TCPtunnel
 
 ## IP Assumptions
-Server Nat Network Address:     10.0.2.4
-Server bridged adapter:         10.0.1.156
-Client Nat Network address:     10.0.2.5
-Host V bridged address:         10.0.1.26
+* Server Nat Network Address:     10.0.2.4
+* Server bridged adapter:         10.0.1.156
+* Client Nat Network address:     10.0.2.5
+* Host V bridged address:         10.0.1.26
 
 ## Instructions
 
