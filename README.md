@@ -30,16 +30,16 @@ A very simple (and buggy) VPN program that uses TLS over a TCPtunnel
 
 9.  On Server:  sudo ./vpnServer -d  (the -d will debug to command line)
 10. On Client:  sudo ./vpnClient -i 10.0.2.4 (-i tells client what ip server is at)
-              * sudo ifconfig tun0 10.4.2.97/24 up
-              * sudo route add -net 10.4.2.0/24 tun0
-              * sudo route add -net 10.0.1.0/24 tun0
+* sudo ifconfig tun0 10.4.2.97/24 up
+* sudo route add -net 10.4.2.0/24 tun0
+* sudo route add -net 10.0.1.0/24 tun0
 11. On Server:  sudo sysctl -w net.ipv4.ip_forward=1
-              * sudo ifconfig tun0 10.4.2.5/24 up
-              * sudo route add -net 10.4.2.0/24 tun0
+* sudo ifconfig tun0 10.4.2.5/24 up
+* sudo route add -net 10.4.2.0/24 tun0
 12. On Host V   sudo route add -net 10.4.2.0/24 gw 10.0.156 enp0s3
 13. On Client   Open wireshark and monitor enp0s3
 14. On Client   open firefox browse to 10.0.1.26 (host V)
-                * you should see traffic from the host website in plain text
+* you should see traffic from the host website in plain text
 ![Alt text](/pthtml.JPG?raw=true "Results from Client clear Host V")
 
 ## for Encrypted connection follow steps 15-23
@@ -52,12 +52,12 @@ A very simple (and buggy) VPN program that uses TLS over a TCPtunnel
 16. On Client   scp -r seed@10.0.2.4:/home/seed/Simple-VPN-With-TLS/cert /home/seed/Simple-VPN-With-TLS/
 18. On Server:  sudo ./vpnServer -d -e
 19. On Client:  sudo ./vpnClient -e -d -i 10.0.2.4
-              * sudo ifconfig tun0 10.4.2.97/24 up
-              * sudo route add -net 10.4.2.0/24 tun0
-              * sudo route add -net 10.0.1.0/24 tun0
+* sudo ifconfig tun0 10.4.2.97/24 up
+* sudo route add -net 10.4.2.0/24 tun0
+* sudo route add -net 10.0.1.0/24 tun0
 20. On Server:  sudo sysctl -w net.ipv4.ip_forward=1
-              * sudo ifconfig tun0 10.4.2.5/24 up
-              * sudo route add -net 10.4.2.0/24 tun0
+* sudo ifconfig tun0 10.4.2.5/24 up
+* sudo route add -net 10.4.2.0/24 tun0
 21. On Host V   sudo route add -net 10.4.2.0/24 gw 10.0.156 enp0s3
 22. On Client   Open wireshark and monitor enp0s3
 22. On Client   open firefox browse to  10.0.1.26 (host V)
