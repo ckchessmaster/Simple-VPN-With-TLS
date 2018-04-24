@@ -34,4 +34,4 @@ Host V bridged address:         10.0.1.26
 12. on Host V   sudo route add -net 10.4.2.0/24 gw 10.0.156 enp0s3
 13. on Client   ping 10.0.1.26 (host V)
 14. on Host V   open wireshark and monitor enp0s3, you should see traffic from the clients tun0 (10.4.2.97)
-![Alt text](~/hostVping.JPG?raw=true "Results from Client tunnel to Host V")
+![Alt text](/hostVping.JPG?raw=true "Results from Client tunnel to Host V")
