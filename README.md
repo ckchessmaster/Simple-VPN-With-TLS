@@ -21,10 +21,13 @@ A very simple (and buggy) VPN program that uses TLS over a TCPtunnel
     type make install
 8. From here on out operate all commands in the  Simple-VPN-With-TLS directory of each machine
 
-### NOTE If your addresses differ from the assumptions after running ifconfig -a, mtach the assumptions and replace in next steps
+### NOTE If your addresses differ from the assumptions after running ifconfig -a, match the assumptions and replace in next steps
+
+## for non-Encrypted connection follow steps 9-14
+## for help using vpnClient or vpnServer use : sudo ./vpnServer -h  or sudo ./vpnClient -h
 
 9. On Server:   sudo ./vpnServer -d  (the -d will debug to command line)
-10. on Client:  sudo ./vpnClient -i 10.0.2.4
+10. on Client:  sudo ./vpnClient -i 10.0.2.4 (-i tells client what ip server is at)
                 sudo ifconfig tun0 10.4.2.97/24 up
                 sudo route add -net 10.4.2.0/24 tun0
                 sudo route add -net 10.0.1.0/24 tun0
@@ -35,3 +38,8 @@ A very simple (and buggy) VPN program that uses TLS over a TCPtunnel
 13. on Client   ping 10.0.1.26 (host V)
 14. on Host V   open wireshark and monitor enp0s3, you should see traffic from the clients tun0 (10.4.2.97)
 ![Alt text](/hostVping.JPG?raw=true "Results from Client tunnel to Host V")
+    on Client you should receive replies from host V
+![Alt text](/clientpings.JPG?raw=true "Results on Client from Host V")    
+
+## for Encrypted connection follow steps XX-XX
+15.  
