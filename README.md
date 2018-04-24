@@ -40,7 +40,7 @@ A very simple (and buggy) VPN program that uses TLS over a TCPtunnel
 13. On Client   Open wireshark and monitor enp0s3
 14. On Client   open firefox browse to 10.0.1.26 (host V)
                 * you should see traffic from the host website in plain text
-![Alt text](/pthml.JPG?raw=true "Results from Client clear Host V")
+![Alt text](/pthtml.JPG?raw=true "Results from Client clear Host V")
 
 ## for Encrypted connection follow steps 15-23
 15. On Server: cd /cert
