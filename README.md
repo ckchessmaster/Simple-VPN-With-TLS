@@ -42,7 +42,7 @@ A very simple (and buggy) VPN program that uses TLS over a TCPtunnel
                 * you should see traffic from the host website in plain text
 ![Alt text](/pthml.JPG?raw=true "Results from Client clear Host V")
 
-## for Encrypted connection follow steps 15-XX
+## for Encrypted connection follow steps 15-23
 15. On Server: cd /cert
 * type sudo ./generateCerts.sh
 * enter in the information for your server first, then your client.
