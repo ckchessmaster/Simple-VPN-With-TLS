@@ -52,9 +52,11 @@ int verify_callback(int preverify_ok, X509_STORE_CTX* x509_ctx) {
 
   if(preverify_ok == 1) {
     debug("Verification passed.\n");
-  } else if(config.shouldDebug == 1){
-    int err = X509_STORE_CTX_get_error(x509_ctx);
-    printf("Verification failed: %s.\n", X509_verify_cert_error_string(err));
+  } else {
+    if (config.shouldDebug == 1) {
+      int err = X509_STORE_CTX_get_error(x509_ctx);
+      printf("Verification failed: %s.\n", X509_verify_cert_error_string(err));
+    }
   }
 }
 
